@@ -8,6 +8,7 @@ import logo from "./assets/logo.png";
 import epick from "./assets/epick.png";
 import cost_center from "./assets/cost_center.png";
 import bn_footer from "./assets/bn_footer.png";
+import adban from "./assets/adban.png";
 
 const Wrapper = styled.div`
   display: flex;
@@ -57,14 +58,12 @@ const Center = styled.div`
   align-items: center;
   height:100%;
 `
-
 const InputWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-top:15px;
   align-items: center;
 `
-
 const Input = styled.div`
   display:flex;
   justify-content:space-between;
@@ -92,17 +91,49 @@ const ImgCardWrapper = styled.div`
   grid-template-columns: 220px 220px 220px 220px;
 	grid-template-rows: 170px 170px 170px;
 `
-const ImgCard = styled.div`
+const ImgCard = styled.button`
   background-color: white;
   border-radius: 12px;
   box-shadow: 0px 5px 10px 0px rgba(97,97,97,0.25);
   height:150px;
   width: 200px;
   outline: none;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  :hover{
+    background-color: gray;
+  }
 `
+const CardWrapper = styled.div`
+  margin-left: 20px;
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: 200px 200px;
+	grid-template-rows: 95px 95px 95px 95px 95px 95px;
+`
+const Card = styled.button`
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(97,97,97,0.25);
+  height:85px;
+  width: 190px;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 25px;
+  color: #55585c;
+  :hover{
+    background-color: #4E81C0;
+    color: white;
+  }
+`
+
 const Footer2 = styled.div`
   background-color: #FFFFFF;
   display: flex;
@@ -140,8 +171,6 @@ const Button4 = styled.button`
   background-color: #FFFFFF;
   border: none;
 `
-
-
 function App() {
   return (
     <Wrapper>
@@ -183,11 +212,25 @@ function App() {
             <ImgCard/>
             <ImgCard/>
             <ImgCard/>
-
           </ImgCardWrapper>
+          <CardWrapper>
+            <Card>초등</Card>
+            <Card>초등영어</Card>
+            <Card>중학</Card>
+            <Card>중학프리미엄</Card>
+            <Card>고교 EBSi</Card>
+            <Card>공무원</Card>
+            <Card>자격증</Card>
+            <Card>공인중개사</Card>
+            <Card>외국어/토익</Card>
+            <Card>EBSmath</Card>
+            <Card>EBSe</Card>
+            <Card>이솦</Card>
+          </CardWrapper>
         </Container>
       </Center>
-
+      <img src = {adban} width = '920px' height = '100px' style = {{marginLeft: '300px',
+        marginBottom: '20px'}}></img>
       <Footer2>
         <Button4 style = {{marginLeft: '115px'}}>EBS 소개</Button4>
         <Button3>EBS 공고</Button3>
