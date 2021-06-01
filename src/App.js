@@ -46,6 +46,7 @@ const Button2 = styled.button`
   font-size: 20px;
   line-height: 27px;
   color: #FFFFFF; 
+  font-weight: 550;
   background-color:#4E81C0;
   border: none;
 `
